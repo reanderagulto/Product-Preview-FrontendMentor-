@@ -1,0 +1,127 @@
+:root{
+    --font-fraunces: 'Fraunces', serif;
+    --font-montserrate: 'Montserrat', sans-serif;
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-dark-blue:hsl(212, 21%, 14%);
+    --color-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+    --font-size-link: 11px;
+    --font-size-default: 0.875rem;
+}
+
+body{
+    margin: unset;
+    background-color: var(--color-cream);
+}
+
+h1, h2, h3{
+    font-family: var(--font-fraunces);
+}
+
+p{
+    font-size: var(--font-size-default);
+}
+
+p, span{
+    font-family: var(--font-montserrate);
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 600px;
+    margin: 1.875em;
+}
+
+.img-container {
+    min-height: 100%;
+}
+
+.img-container,
+.img-container img.desktop{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.img-container img.desktop, 
+.img-container img.mobile{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container img.mobile{
+    display: none;
+}
+
+
+.text-container {
+    min-height: 100%;
+    padding: 1.98em;
+    background-color: #FFF;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.text-container .preview-text{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: var(--color-grayish-blue);
+}
+
+.text-container .title {
+    font-size: 40px;
+    color: var(--color-dark-blue);
+}
+
+.text-container .desc{
+    font-size: var(--font-size-default);
+    color: var(--color-grayish-blue);
+}
+
+.text-container div.price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-container div.price p{
+    font-size: 48px;
+    color: var(--color-dark-cyan);
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.text-container div.price span{
+    color: var(--color-grayish-blue);
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+footer.attribution { 
+    font-size: var(--font-size-link);
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+footer.attribution a { 
+    color: var(--color-grayish-blue);
+    transition: all 0.3s ease-out;
+}
+
+footer.attribution a:hover{
+    color: var(--color-dark-cyan);
+}
