@@ -90,6 +90,7 @@ main .container{
 .text-container .desc{
     font-size: var(--font-size-default);
     color: var(--color-grayish-blue);
+    line-height: 1.2500em;
 }
 
 .text-container div.price{
@@ -111,6 +112,32 @@ main .container{
     text-decoration: line-through;
 }
 
+button.btn.btn-submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: unset;
+    border-radius: 10px;
+    background-color: var(--color-dark-cyan);
+    color: #FFF;
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--font-montserrate);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    transition: background-color 0.5s ease-out;
+}
+
+button.btn.btn-submit img {
+    margin-right: 10px;
+}
+
+button.btn.btn-submit:hover {
+    background-color: #3c8067b0;
+}
+
 footer.attribution { 
     font-size: var(--font-size-link);
     text-align: center; 
@@ -124,4 +151,34 @@ footer.attribution a {
 
 footer.attribution a:hover{
     color: var(--color-dark-cyan);
+}
+
+@media only screen and (max-width: 767px) {
+    main .container{
+        flex-direction: column;
+        margin: 25px;
+    }
+
+    .text-container{
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: unset;
+    }
+
+    .img-container, .img-container img.mobile{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .img-container img.desktop{
+        display: none;
+    }
+
+    .img-container img.mobile{
+        display: block;
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
 }
